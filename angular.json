@@ -19,7 +19,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
+              "src/zedground.ico",
               "src/assets"
             ],
             "styles": [
@@ -132,5 +132,10 @@
       }
     }
   },
-  "defaultProject": "zed-ground"
+  "defaultProject": "zed-ground",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

@@ -1,0 +1,13 @@
+<font style="font-family: xenosphere;" size="5">Projects</font>
+<p><i>Here are some personal projects</i></p>
+
+<div >
+  <span *ngFor="let project of projects" class="project">
+    <a href="{{ project.link }}" target="blank">
+      <h3>
+         <div [innerHTML]="project.name"></div>
+      </h3>
+      <img src="{{ project.imagePath }}" style="width: 150px; height: 150px;"/>
+    </a>   
+  </span>
+</div>
