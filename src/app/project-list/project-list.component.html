@@ -1,13 +1,15 @@
-<font style="font-family: xenosphere;" size="5">Projects</font>
-<p><i>Here are some personal projects</i></p>
 
-<div >
-  <span *ngFor="let project of projects" class="project">
-    <a href="{{ project.link }}" target="blank">
-      <h3>
-         <div [innerHTML]="project.name"></div>
-      </h3>
-      <img src="{{ project.imagePath }}" style="width: 150px; height: 150px;"/>
-    </a>   
+<p style="font-family: xenosphere; font-size: 30px;" class="text-shadow">Projects</p>
+<p><i>Here are some of my personal projects</i></p>
+
+
+  <span *ngFor="let project of projects" class="container shadow-box">
+    <app-project
+      [name]="project.name"
+      [url]="project.url"
+      [imagePath]="project.imagePath"
+      [path]="project.path"
+    ></app-project>
   </span>
-</div>
+
+

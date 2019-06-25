@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project',
@@ -6,15 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent implements OnInit {
-  name: string;
-  imagePath: string;
-  link: string;
-
-  constructor(name: string, imagePath: string, link: string) { 
-    this.name = name;
-    this.imagePath = imagePath;
-    this.link = link;
-  }
+  @Input() name: string;
+  @Input() imagePath: string;
+  @Input() url: string;
+  @Input() path: string;
 
   ngOnInit() {
   }

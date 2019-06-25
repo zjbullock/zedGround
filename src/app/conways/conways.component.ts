@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-conways',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConwaysComponent implements OnInit {
 
-  constructor() { }
+  mainPage: String;
 
   ngOnInit() {
+    this.mainPage = "";
   }
 
 }

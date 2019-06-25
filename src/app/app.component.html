@@ -1,9 +1,35 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
-    <font style="font-family: xenosphere;" size="7">
-        <div [innerHTML]="title"></div>
-    </font>
-  <app-project-list></app-project-list>
-</div>
+<header style="font-family: xenosphere; padding-bottom: 55px;" class="text-shadow">
+    <nav>
+        <p style="float: left; font-size: 40px; padding-left:20px;" >
+                {{ title }}
+        </p>
+        <div style="float: right; font-size: 20px; margin-top: 15px;">
+            <a routerLink="">
+                <p>
+                    About Me
+                </p>
+            </a>
+            <a routerLink="projects">
+                <p>
+                    Projects
+                </p>
+            </a>
+            <a routerLink="skills">
+                <p>
+                    Skills
+                </p>
+            </a>
+            <a routerLink="contact">
+                <p>
+                    Contact
+                </p>
+            </a>
+        </div>
+    </nav>
+</header>
+<hr>
+<main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+    <router-outlet #o="outlet"></router-outlet>
+</main>
 
-<router-outlet></router-outlet>

@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { Constants } from 'src/assets/constants';
-import { ProjectListComponent } from 'src/app/project-list/project-list.component';
-import { ProjectComponent } from 'src/app/project/project.component';
+import { fadeAnimation } from 'src/assets/animations/fade';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [fadeAnimation]
 })
 export class AppComponent {
   title = Constants.TITLE;

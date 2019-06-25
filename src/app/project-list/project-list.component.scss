@@ -1,7 +1,12 @@
-.project {
+.container {
     border: 10px solid #D64343; 
+    border-radius: 25px;
     width: 200px;
     display: inline-block; 
     padding: 20px 20px 20px 20px; 
     margin: 20px;
+}
+.shadow-box{
+    box-shadow:  8px 8px rgba(0,0,0,0.19),  8px 8px rgba(0,0,0,0.23);
+      padding: 10px;
 }
