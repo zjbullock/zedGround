@@ -1,9 +1,5 @@
 import {
-    trigger,
-    animate,
-    transition,
-    style,
-    query
+  query, animate, state, stagger, useAnimation, animation, style, transition, keyframes, trigger
   } from '@angular/animations';
   
   export const fadeAnimation = trigger('fadeAnimation', [
@@ -32,3 +28,12 @@ import {
       )
     ])
   ]);
+
+  export const fadeText = trigger('fadeText', [
+    transition(':enter', [
+      style({ opacity: 0 }),
+      animate('1s ease-in',
+        style({ opacity: 1 }))
+    ]),
+  ]);
+    

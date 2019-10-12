@@ -10,6 +10,7 @@ export class ProjectComponent implements OnInit {
   @Input() imagePath: string;
   @Input() url: string;
   @Input() path: string;
+  @Input() description: string;
 
   ngOnInit() {
   }

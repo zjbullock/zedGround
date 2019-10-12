@@ -1,18 +1,6 @@
-<ng-container *ngIf= "path;else external" >
-  <a [routerLink]="path">
-      <img src="{{ imagePath }}" style="width: 150px; height: 150px;"/>
-      <h3>
-          {{ name }}
-      </h3>
-  </a>  
-</ng-container>
-
-<ng-template #external>
-    <a href="{{ url }}" target="_blank">
-        <img src="{{ imagePath }}" style="width: 150px; height: 150px;"/>
-        <h3>
-            {{ name }}
-        </h3>
-    </a> 
-</ng-template>
- 
+<div class="project">
+    <img src="{{ imagePath }}" style="width: 150px; height: 150px;"/>
+    <h3>
+        {{ name }}
+    </h3>
+</div>

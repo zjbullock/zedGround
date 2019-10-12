@@ -1,3 +1,16 @@
-<p>
-  skill-list works!
-</p>
+
+<p style="font-family: xenosphere; font-size: 30px;" class="text-shadow">Skills</p>
+<p><i>Click on a skill to read about my experience with it.</i></p>
+
+<div *ngFor="let technicalSkill of technicalSkills" (click)="selectSkill(technicalSkill)" [ngClass]="(technicalSkill === selectedSkill)?'selected-container':'container'">
+  <app-skill
+    [name]="technicalSkill.name"
+    [icon]="technicalSkill.icon"
+    [description]="technicalSkill.description"
+  ></app-skill>
+</div>
+<hr>
+<div class="description">
+  <h3  *ngFor="let selectedSkill of [selectedSkill]" [@fadeText] [innerHTML]="selectedSkill.description"></h3>
+</div>
+

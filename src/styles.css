@@ -9,14 +9,34 @@ body{
     text-shadow: 4px 4px 2px black;
 }
 
-.container {
+/* .container {
     border: 10px solid #D64343; 
     border-radius: 25px;
     width: 800px;
-    display: inline-block; 
     padding: 20px 20px 20px 20px; 
     margin: 20px;
     position: relative;
+} */
+
+.container {
+    border: 10px solid #D64343; 
+    border-radius: 25px;
+    width: 200px;
+    display: inline-block; 
+    padding: 20px 20px 20px 20px; 
+    margin: 20px;
+    box-shadow: 8px 8px rgba(0,0,0,0.19),  8px 8px rgba(0,0,0,0.23);
+    padding: 10px;
+}
+.selected-container{
+    border: 10px solid #DE6868; 
+    border-radius: 25px;
+    width: 200px;
+    display: inline-block; 
+    padding: 20px 20px 20px 20px; 
+    margin: 20px;
+    padding: 10px;
+    color: #FFA9A9 !important;
 }
 
 hr{
@@ -25,6 +45,7 @@ hr{
 }
 
 router-outlet ~ * {
+    width: 100%;
     position: absolute;
     left: 50%;
 -webkit-transform: translateX(-50%);

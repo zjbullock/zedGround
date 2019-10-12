@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { SkillComponent } from './skill/skill.component';
 import { SkillListComponent } from './skill-list/skill-list.component';
+import { LinkComponent } from './link/link.component';
 
 
 
@@ -26,6 +27,7 @@ import { SkillListComponent } from './skill-list/skill-list.component';
     ContactListComponent,
     SkillComponent,
     SkillListComponent,
+    LinkComponent,
   ],
   imports: [
     BrowserAnimationsModule,

@@ -1,15 +1,35 @@
 
 <p style="font-family: xenosphere; font-size: 30px;" class="text-shadow">Projects</p>
-<p><i>Here are some of my personal projects</i></p>
-
-
-  <span *ngFor="let project of projects" class="container shadow-box">
-    <app-project
-      [name]="project.name"
-      [url]="project.url"
-      [imagePath]="project.imagePath"
-      [path]="project.path"
-    ></app-project>
-  </span>
-
+<p><i>Click on one of my projects to read about it.</i></p>
+<div *ngFor="let project of projects" [ngClass]="(project === selectedProject)?'selected-container':'container'" (click)="selectProject(project)">
+  <app-project
+    [name]="project.name"
+    [url]="project.url"
+    [imagePath]="project.imagePath"
+    [path]="project.path"
+  ></app-project>
+</div>
+<hr>
+<div class="description" *ngFor="let selectedProject of [selectedProject]" [@fadeText]>
+    <h3  [innerHTML]="selectedProject.description"></h3>
+    <br>
+    <ng-container *ngIf= "selectedProject.path;else external" >
+        <a [routerLink]="selectedProject.path">
+            <div>
+              <h3>
+                  Click here to be directed to the page
+              </h3>
+            </div>
+        </a>  
+      </ng-container>
+      <ng-template #external>
+          <a href="{{ selectedProject.url }}" target="_blank" *ngIf="selectedProject.url">
+              <div>
+                  <h3>
+                      Click here to view the repo.
+                  </h3>
+              </div>
+          </a> 
+      </ng-template>
+</div>
 
