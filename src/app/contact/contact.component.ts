@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
+
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-
-  constructor() { }
-
+  @Input() name: string;
+  @Input() icon: IconDefinition;
+  @Input() url: string;
   ngOnInit() {
   }
-
 }

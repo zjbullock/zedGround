@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<header style="font-family: xenosphere; padding-bottom: 55px;" class="text-shadow">
+<header class="text-shadow xeno">
     <nav>
-        <p style="float: left; font-size: 40px; padding-left:20px;" >
+        <p class="navBar" >
                 {{ title }}
         </p>
         <div *ngFor="let link of links" [ngClass]="(link === selectedLink)?'selected-link':'link'">

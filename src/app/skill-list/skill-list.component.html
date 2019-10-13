@@ -1,6 +1,6 @@
 
-<p style="font-family: xenosphere; font-size: 30px;" class="text-shadow">Skills</p>
-<p><i>Click on a skill to read about my experience with it.</i></p>
+<p style="font-family: xenosphere; font-size: 30px;" class="text-shadow">Tools and Technologies</p>
+<p><i>Click on a card to read about my experience with it.</i></p>
 
 <div *ngFor="let technicalSkill of technicalSkills" (click)="selectSkill(technicalSkill)" [ngClass]="(technicalSkill === selectedSkill)?'selected-container':'container'">
   <app-skill
@@ -9,6 +9,8 @@
     [description]="technicalSkill.description"
   ></app-skill>
 </div>
+<br>
+<br>
 <hr>
 <div class="description">
   <h3  *ngFor="let selectedSkill of [selectedSkill]" [@fadeText] [innerHTML]="selectedSkill.description"></h3>

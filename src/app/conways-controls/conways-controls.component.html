@@ -1,0 +1,14 @@
+<div class="center">
+  <div class="buttonGroup left">
+    <button class="button" [disabled]="isRunning" (click)="start()">Start</button>
+    <button class="button" (click)="step()">Step</button>
+    <button class="button" [disabled]="!isRunning" (click)="stop()">Stop</button>
+    <button class="button" (click)="randomize()">Randomize</button>
+    <button class="button" (click)="spawnGliders()">Spawn Gliders: {{ getGliderStatus() }}</button>
+    <button class="button" (click)="reset()">Reset</button>
+  </div>
+  <p class="right"> 
+    Generation {{this.getGenerationCount()}}
+  </p>
+</div>
+

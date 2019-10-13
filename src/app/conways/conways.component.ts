@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { GameOfLifeService } from '../services/conways-service';
+import { ConwaysCell } from '../conways/conways-cell';
 
 @Component({
   selector: 'app-conways',
@@ -7,10 +9,19 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ConwaysComponent implements OnInit {
 
-  mainPage: String;
+  @Input() rows: number;
+  @Input() cols: number;
+  gameOfLifeService: GameOfLifeService;
+  grid: ConwaysCell[][];
 
   ngOnInit() {
-    this.mainPage = "";
+    this.gameOfLifeService = new GameOfLifeService();
+    this.gameOfLifeService.initialize();
+    this.gameOfLifeService.randomizeCellStates();
+    this.grid = this.gameOfLifeService.getGrid();
   }
 
+  toggleState(cell: ConwaysCell) {
+    cell.toggleState();
+  }
 }

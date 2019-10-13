@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Constants } from 'src/assets/constants';
 import { fadeAnimation } from 'src/assets/animations/fade';
 
-interface Link{
+interface Link {
   route: string;
   title: string;
 }
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   links: Link[] = null;
   selectedLink: Link;
 
-  ngOnInit(){
+  ngOnInit() {
     this.links = [
       {
         route: 'contact',
@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
       {
         route: '',
         title: 'About Me'
-      }
+      },
     ];
   }
 

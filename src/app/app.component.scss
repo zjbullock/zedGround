@@ -1,8 +1,16 @@
 .navBar{
-display: inline-block;
+    float: left;
+    font-size: 40px;
+    padding-left: 20px;
 }
+
 header{
     width: 100%;
+}
+
+.xeno{
+    font-family: xenosphere;
+    padding-bottom: 55px;
 }
 
 .link{
@@ -22,28 +30,6 @@ header{
     padding-right: 15px;
 }
 
-a{
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-
-a:link{
-    color: white;
-  }
-  
-  a:visited{
-      color: white;
-  }
-  
-  a:hover{
-    color: #D64343 !important;
-  }
-  
-  a:active{
-      color: #FFA9A9 !important;
-  }
-  
 p{
     display: inline-block;
     margin-top: 0px;

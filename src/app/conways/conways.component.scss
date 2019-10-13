@@ -1,16 +1,54 @@
-#conway{
-    background-color: white;
-
+a{
+    text-decoration: none;
 }
 
-#yearText{
-    display:inline-block;
+.center{
+  margin: auto;
+  width: 800px;
+  padding: 10px;
+  display: block;
 }
 
-#year{
-    display:inline-block;
+.conway{
+  text-align:center;
 }
 
-.Container{
-    margin-right:16px;
+.grid{
+  width: 600px;
+  height: 100%;
+  padding: 10px;
 }
+
+.border{
+  border: 10px solid #D64343; 
+  border-radius: 25px;
+}
+
+.xeno{
+    font-family: xenosphere;
+    font-size: 25px;
+}
+
+.grid-row {
+    display: flex;
+    margin-bottom: 1px;
+  }
+  
+  .grid-row:last-child {
+    margin-bottom: 0;
+  }
+  
+  .grid-cell {
+    width: 10px;
+    height: 10px;
+    background-color: #eaeaea;
+    margin-right: 1px;
+  }
+  
+  .grid-cell:last-child {
+    margin-right: 0;
+  }
+  
+  .alive {
+    background-color: black;
+  }

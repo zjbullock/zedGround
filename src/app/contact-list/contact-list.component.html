@@ -1,3 +1,10 @@
 
 <p style="font-family: xenosphere; font-size: 30px;" class="text-shadow">Contact</p>
-<p><i>Reach out to me on Social Media</i></p>
+<p><i>Click on a card to reach out to me!</i></p>
+<div *ngFor="let contact of contacts" class="container">
+    <app-contact
+        [name]="contact.name"
+        [url]="contact.url"
+        [icon]="contact.icon"
+    ></app-contact>
+</div>

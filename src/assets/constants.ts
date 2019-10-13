@@ -1,4 +1,4 @@
 export const Constants = {
-    TITLE: "ZedGround",
-    NAME: "Zikomo Bullock"
+    TITLE: 'ZedGround',
+    NAME: 'Zikomo Bullock'
 };

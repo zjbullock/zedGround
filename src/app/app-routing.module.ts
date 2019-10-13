@@ -8,24 +8,24 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: HomeComponent,
-    pathMatch: "full",
+    pathMatch: 'full',
   },
   {
-    path: "conway",
+    path: 'conway',
     component: ConwaysComponent
   },
   {
-    path: "projects",
+    path: 'projects',
     component: ProjectListComponent,
   },
   {
-    path: "contact",
+    path: 'contact',
     component: ContactListComponent,
   },
   {
-    path: "skills",
+    path: 'skills',
     component: SkillListComponent
   }
 ];

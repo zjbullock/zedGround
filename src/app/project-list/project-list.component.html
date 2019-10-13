@@ -1,6 +1,6 @@
 
 <p style="font-family: xenosphere; font-size: 30px;" class="text-shadow">Projects</p>
-<p><i>Click on one of my projects to read about it.</i></p>
+<p><i>Click on a card to view a description of the project.</i></p>
 <div *ngFor="let project of projects" [ngClass]="(project === selectedProject)?'selected-container':'container'" (click)="selectProject(project)">
   <app-project
     [name]="project.name"
@@ -9,12 +9,14 @@
     [path]="project.path"
   ></app-project>
 </div>
+<br>
+<br>
 <hr>
 <div class="description" *ngFor="let selectedProject of [selectedProject]" [@fadeText]>
     <h3  [innerHTML]="selectedProject.description"></h3>
     <br>
     <ng-container *ngIf= "selectedProject.path;else external" >
-        <a [routerLink]="selectedProject.path">
+        <a routerLink="{{selectedProject.path}}">
             <div>
               <h3>
                   Click here to be directed to the page

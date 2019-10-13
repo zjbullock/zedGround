@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background-color: #202020;
+    background-image: linear-gradient(to bottom right, #3A3A3A, #202020);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
     color: white;
     text-align: center;
 }
@@ -8,15 +11,6 @@ body{
 .text-shadow{
     text-shadow: 4px 4px 2px black;
 }
-
-/* .container {
-    border: 10px solid #D64343; 
-    border-radius: 25px;
-    width: 800px;
-    padding: 20px 20px 20px 20px; 
-    margin: 20px;
-    position: relative;
-} */
 
 .container {
     border: 10px solid #D64343; 
@@ -42,6 +36,28 @@ body{
 hr{
 	border-top: 1px solid;
 
+}
+
+a{
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+}
+
+a:link{
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover{
+    color: #D64343 !important;
+}
+
+a:active{
+    color: #FFA9A9 !important;
 }
 
 router-outlet ~ * {

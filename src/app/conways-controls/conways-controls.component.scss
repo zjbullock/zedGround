@@ -1,0 +1,39 @@
+:host {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    align-items: center;
+  }
+
+  .center{
+    text-align:center;
+    width: 800px;
+  }
+
+  .left{
+    float: left;
+  }
+
+  .right{
+    float: right;
+  }
+
+  .button{
+    font-size: 20px;
+  }
+
+  button {
+    border: 0;
+    background-color: #D64343;
+    color: #fff;
+    padding: .4em;
+    margin: 0 .4em;
+  }
+  
+  button[disabled] {
+    background-color: #FFA9A9;
+    color: #a2d0ff;
+  }

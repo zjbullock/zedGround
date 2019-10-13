@@ -1,10 +1,24 @@
-<p>
-  conways works!
-</p>
-<!--  TODO:  FINISH CONWAYS.TS IMPLEMENTATION
--->
-<div>
-  <a [routerLink] = "mainPage">
-    Back to Main Page
-  </a>
+<div class="conway">
+    <p style="font-family: xenosphere; font-size: 30px;" class="text-shadow">Conways Game of Life</p>
+    <div class="border grid center">
+        <div class="grid-row" *ngFor="let row of grid">
+            <div class="grid-cell"
+                 [class.alive]="cell.currentState"
+                 *ngFor="let cell of row"
+                 (click)="toggleState(cell)">
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <app-conways-controls [gameOfLifeService]="gameOfLifeService"></app-conways-controls>
+    </div>
+    <!--  TODO:  FINISH CONWAYS.TS IMPLEMENTATION
+    -->
+    <div>
+      <a routerLink="../projects">
+        <p class="text-shadow xeno">
+            Back to Projects
+        </p>
+      </a>   
+    </div>
 </div>
