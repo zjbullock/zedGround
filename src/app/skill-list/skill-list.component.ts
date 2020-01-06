@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { SkillComponent } from '../skill/skill.component';
 import { fadeText } from 'src/assets/animations/fade';
 
@@ -15,10 +15,10 @@ interface Skill {
   animations: [fadeText]
 })
 
-export class SkillListComponent implements OnInit {
+export class SkillListComponent implements OnInit, AfterViewChecked {
   technicalSkills: Skill[];
   leadershipSkills: Skill[];
-  selectedSkill: SkillComponent = new SkillComponent();
+  selectedSkill: SkillComponent;
   previousSkill: SkillComponent = null;
   show: 'hide';
 
@@ -27,25 +27,25 @@ export class SkillListComponent implements OnInit {
       {
         name: 'Angular',
         icon: 'devicon-angularjs-plain',
-        description: 'This site is actually my first Angular app.<br>'
+        description: 'This site is actually my first Angular app.\n'
         + 'I must say, I\'m quite enjoying the Typescript.  While I can do things quick and dirty in Javascript, '
-        + 'Typescript is forcing me to truly consider the structure of my applications and what is being passed around.<br>'
+        + 'Typescript is forcing me to truly consider the structure of my applications and what is being passed around.\n'
         + 'Couple that with Angular\'s fantastic approach to componentization, and I\'m slowly being sold on it.',
       },
       {
         name: 'Golang',
         icon: 'devicon-go-plain',
         description: 'Golang is a relatively young language that has '
-        + 'grown to become one of my favorite languages to use in developing microservices.<br>'
+        + 'grown to become one of my favorite languages to use in developing microservices.\n'
         + 'I\'ve already used it to develop multiple microservices for recreational '
         + 'purposes and even in building batch processes and microservice architectures at work.',
       },
       {
         name: 'Java (With Spring)',
         icon: 'devicon-java-plain-wordmark',
-        description: 'Ah yes, Java.  My first love.  The tried and true.<br>'
+        description: 'Ah yes, Java.  My first love.  The tried and true.\n'
         + 'When all else fails, Java somehow prevails.  After going on a somewhat lengthy hiatus from Java, and coming back from Go, '
-        + 'I found that most of the new tricks and techniques I learned in Go were usable in Java.<br>'
+        + 'I found that most of the new tricks and techniques I learned in Go were usable in Java.\n'
         + 'Once I was exposed to Java version 12 and higher, '
         + 'it somewhat reignited my love for the language and ease of spinning up services.  '
         + 'I\'m still a sucker for Golang though.',
@@ -63,6 +63,13 @@ export class SkillListComponent implements OnInit {
         + 'Yet, here I am building my portfolio page in Angular.  Where\'s the fun in using things I already know though, right?',
       },
     ];
+  }
+
+  ngAfterViewChecked() {
+    if (this.selectedSkill) {
+      const el = document.getElementById('description');
+      el.scrollIntoView();
+    }
   }
 
   selectSkill(skill: SkillComponent) {

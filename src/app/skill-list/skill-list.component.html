@@ -11,8 +11,8 @@
 </div>
 <br>
 <br>
-<hr>
-<div class="description">
+<div id="description" *ngIf="selectedSkill">
+  <hr [@fadeText]>
   <h3  *ngFor="let selectedSkill of [selectedSkill]" [@fadeText] [innerHTML]="selectedSkill.description"></h3>
 </div>
 

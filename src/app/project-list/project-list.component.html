@@ -11,8 +11,9 @@
 </div>
 <br>
 <br>
-<hr>
-<div class="description" *ngFor="let selectedProject of [selectedProject]" [@fadeText]>
+<div *ngIf="selectedProject">
+  <hr [@fadeText]>
+  <div id="description" *ngFor="let selectedProject of [selectedProject]" [@fadeText]>
     <h3  [innerHTML]="selectedProject.description"></h3>
     <br>
     <ng-container *ngIf= "selectedProject.path;else external" >
@@ -34,4 +35,6 @@
           </a> 
       </ng-template>
 </div>
+</div>
+
 
